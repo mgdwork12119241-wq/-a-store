@@ -1,46 +1,10 @@
 <!doctype html>
 <html lang="ar" dir="rtl">
-<head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-<meta name="theme-color" content="#111827" />
-<title>ستورِي — مساعدك للطلبات</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css" />
-</head>
-<body>
-<div class="app-shell">
-<header class="topbar">
-<button class="brand" data-action="home"><span class="brand-mark">س</span><span>ستورِي</span></button>
-<div class="top-actions">
-<button class="location-pill" data-action="location">⌖ <span>اختر موقعك</span></button>
-<button class="cart-btn" data-action="cart">🛒 <span>السلة</span><b id="cartCount">0</b></button>
-</div>
-</header>
-<main>
-<section class="hero" id="hero">
-<div class="hero-orb orb-one"></div><div class="hero-orb orb-two"></div>
-<div class="hero-content">
-<span class="eyebrow">مساعد ستورِي المحلي ✦ للبحث والطلبات</span>
-<div class="ai-greeting"><span class="ai-dot"></span><span id="aiGreeting">أهلا! أنا نموذج محلي لمساعدتك بالمتاجر والطلبات 😄</span></div>
-<h1>شو بتحب تطلب؟<br><em>عشو عم تدور؟</em></h1>
-<p>احكيلي على السريع شو بدك، وأنا بدوّر لك بين الفئات والمحلات وبقترح عليك كم خيار.</p>
-<div class="search-box"><span>⌕</span><input id="searchInput" placeholder="مثلاً: بدي بيتزا، شقة، لابتوب، صيدلية..." autocomplete="off"/><button id="searchBtn">ابحث</button></div>
-<div class="suggestions"><span>جرّب مثلاً:</span><button data-search="بيتزا">🍕 بدي شي زاكي</button><button data-search="شقة للإيجار">🏠 دورلي على شقة</button><button data-search="هاتف">📱 بدي موبايل</button><button data-search="ملابس">👕 شي مرتب ألبسه</button></div>
-</div></section>
-<section class="section categories-section"><div class="section-head"><div><span class="mini-label">استكشف بسرعة</span><h2>الفئات</h2></div><button class="text-btn" data-action="categories">كل الفئات ←</button></div><div class="category-grid" id="categoryGrid"></div></section>
-<section class="section results-section" id="resultsSection" hidden>
-<div class="section-head"><div><span class="mini-label">رد المساعد</span><h2 id="resultsTitle">النتائج</h2></div><button class="text-btn" data-action="home">مسح البحث</button></div>
-<div class="ai-result-card" id="aiResultCard"><div class="ai-result-head"><span class="ai-avatar">س</span><div><strong>مساعد ستورِي</strong><small>نموذج محلي · بحث في المتاجر</small></div></div><p id="aiResultText"></p></div>
-<div class="thinking" id="thinking" hidden><span></span><span></span><span></span> جاري التفكير والبحث...</div>
-<div class="store-grid" id="resultsGrid"></div>
-</section>
-<section class="section stores-section"><div class="section-head"><div><span class="mini-label">اختيارات ستورِي</span><h2>محلات مميزة</h2></div><button class="text-btn" data-action="stores">كل المحلات ←</button></div><div class="store-grid" id="storeGrid"></div></section>
-<section class="join-banner"><div><span class="mini-label">لأصحاب الأعمال</span><h2>عندك محل، مطعم أو خدمة؟</h2><p>ابعث بيانات نشاطك مباشرة على WhatsApp، ونحن نراجع الطلب ونضيفه للمنصة.</p></div><button data-action="addStore">+ أضف نشاطك</button></section>
-</main>
-<footer><span>ستورِي © 2026</span><span>منصة للطلبات والخدمات والمحلات</span><span><button data-action="admin">🔒 الإدارة</button> · <button data-action="help">المساعدة</button></span></footer>
-</div>
-<div class="modal-backdrop" id="modal" hidden><div class="modal" role="dialog" aria-modal="true"><button class="close" data-action="close">×</button><div id="modalContent"></div></div></div><div class="toast" id="toast"></div>
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script src="supabase-config.js"></script><script src="app.js"></script>
-</body></html>
+<head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"/><meta name="theme-color" content="#111827"/><title>ستورِي — مساعدك للطلبات</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="style.css"/></head>
+<body><div class="app-shell"><header class="topbar"><button class="brand" data-action="home"><span class="brand-mark">س</span><span>ستورِي</span></button><div class="top-actions"><button class="location-pill" data-action="location">⌖ <span>اختر موقعك</span></button><button class="cart-btn" data-action="cart">🛒 <span>السلة</span><b id="cartCount">0</b></button></div></header><main>
+<section class="hero"><div class="hero-content"><span class="eyebrow">مساعد ستورِي المحلي ✦ للبحث والطلبات</span><div class="ai-greeting"><span class="ai-dot"></span><span>أهلا! أنا نموذج محلي لمساعدتك بالمتاجر والطلبات 😄</span></div><h1>شو بتحب تطلب؟<br><em>عشو عم تدور؟</em></h1><p>احكيلي شو بدك، وأنا بدوّر لك بين الفئات والمحلات وبقترح عليك كم خيار.</p><div class="search-box"><span>⌕</span><input id="searchInput" placeholder="مثلاً: بدي بيتزا، شقة، لابتوب، صيدلية..."/><button id="searchBtn">ابحث</button></div><div class="suggestions"><span>جرّب:</span><button data-search="بيتزا">🍕 شي زاكي</button><button data-search="شقة للإيجار">🏠 شقة</button><button data-search="هاتف">📱 موبايل</button><button data-search="ملابس">👕 شي مرتب</button></div></div></section>
+<section class="section"><div class="section-head"><div><span class="mini-label">استكشف بسرعة</span><h2>الفئات</h2></div><button class="text-btn" data-action="categories">كل الفئات ←</button></div><div class="category-grid" id="categoryGrid"></div></section>
+<section class="section results-section" id="resultsSection" hidden><div class="section-head"><div><span class="mini-label">رد المساعد</span><h2 id="resultsTitle">النتائج</h2></div><button class="text-btn" data-action="home">مسح البحث</button></div><div class="thinking" id="thinking" hidden><span></span><span></span><span></span> جاري التفكير والبحث...</div><div class="ai-result-card" id="aiResultCard"><div class="ai-result-head"><span class="ai-avatar">س</span><div><strong>مساعد ستورِي</strong><small>نموذج محلي · بحث في المتاجر</small></div></div><p id="aiResultText"></p></div><div class="store-grid" id="resultsGrid"></div></section>
+<section class="section"><div class="section-head"><div><span class="mini-label">اختيارات ستورِي</span><h2>محلات مميزة</h2></div></div><div class="store-grid" id="storeGrid"></div></section>
+<section class="join-banner"><div><span class="mini-label">لأصحاب الأعمال</span><h2>عندك محل، مطعم أو خدمة؟</h2><p>ابعث بيانات نشاطك مباشرة على WhatsApp، ونحن نراجع الطلب.</p></div><button data-action="addStore">+ أضف نشاطك</button></section></main>
+<footer><span>ستورِي © 2026</span><span>منصة للطلبات والخدمات والمحلات</span><span><button data-action="admin">🔒 الإدارة</button> · <button data-action="settings">⚙️ الإعدادات</button></span></footer></div><div class="modal-backdrop" id="modal" hidden><div class="modal"><button class="close" data-action="close">×</button><div id="modalContent"></div></div></div><div class="toast" id="toast"></div><script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script src="supabase-config.js"></script><script src="app.js"></script></body></html>

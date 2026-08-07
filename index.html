@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#111827" />
+  <title>ستورِي — اطلب اللي بدك ياه</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <button class="brand" data-action="home"><span class="brand-mark">س</span><span>ستورِي</span></button>
+      <div class="top-actions">
+        <button class="location-pill" data-action="location">⌖ <span>اختر موقعك</span></button>
+        <button class="cart-btn" data-action="cart">🛒 <span>السلة</span><b id="cartCount">0</b></button>
+        <button class="account-btn" data-action="account" id="accountBtn">دخول / حساب جديد</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" id="hero">
+        <div class="hero-orb orb-one"></div><div class="hero-orb orb-two"></div>
+        <div class="hero-content">
+          <span class="eyebrow">كل شي بدك ياه، بمكان واحد</span>
+          <h1>شو بتحب تطلب؟<br><em>عشو عم تدور؟</em></h1>
+          <p>اكتب طلبك بطريقتك، أو اختار من الفئات والمحلات القريبة منك.</p>
+          <div class="search-box">
+            <span>⌕</span><input id="searchInput" placeholder="مثلاً: بدي بيتزا، شقة للإيجار، أو لابتوب..." autocomplete="off"/><button id="searchBtn">ابحث</button>
+          </div>
+          <div class="suggestions"><span>اقتراحات:</span><button data-search="بيتزا">🍕 بيتزا</button><button data-search="شقة للإيجار">🏠 شقة للإيجار</button><button data-search="هاتف">📱 هاتف</button><button data-search="ملابس">👕 ملابس</button></div>
+        </div>
+      </section>
+
+      <section class="section categories-section">
+        <div class="section-head"><div><span class="mini-label">استكشف</span><h2>كل الفئات</h2></div><button class="text-btn" data-action="categories">عرض الكل ←</button></div>
+        <div class="category-grid" id="categoryGrid"></div>
+      </section>
+
+      <section class="section results-section" id="resultsSection" hidden>
+        <div class="section-head"><div><span class="mini-label">نتائج البحث</span><h2 id="resultsTitle">المحلات والمنتجات</h2></div><button class="text-btn" data-action="home">مسح البحث</button></div>
+        <div class="store-grid" id="resultsGrid"></div>
+      </section>
+
+      <section class="section stores-section">
+        <div class="section-head"><div><span class="mini-label">قريب منك</span><h2>محلات مميزة</h2></div><button class="text-btn" data-action="stores">كل المحلات ←</button></div>
+        <div class="store-grid" id="storeGrid"></div>
+      </section>
+
+      <section class="join-banner">
+        <div><span class="mini-label">لأصحاب الأعمال</span><h2>عندك محل، مطعم أو خدمة؟</h2><p>أضف نشاطك على ستورِي ووصل لعملاء جدد.</p></div>
+        <button data-action="addStore">+ أضف نشاطك</button>
+      </section>
+    </main>
+
+    <footer><span>ستورِي © 2026</span><span>منصة للطلبات والخدمات والمحلات</span><span><button data-action="help">المساعدة</button> · <button data-action="privacy">الخصوصية</button></span></footer>
+  </div>
+
+  <div class="modal-backdrop" id="modal" hidden><div class="modal" role="dialog" aria-modal="true"><button class="close" data-action="close">×</button><div id="modalContent"></div></div></div>
+  <div class="toast" id="toast"></div>
+  <script src="app.js"></script>
+</body>
+</html>
